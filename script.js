@@ -1,37 +1,29 @@
-(() => {
-  const sink = document.getElementById('sheetSink');
-  const forms = [...document.querySelectorAll('.signup')];
-  let pendingForm = null;
-  let originalButtonText = '';
+const sink = document.getElementById("sheetSink");
+let submittedForm = null;
 
-  for (const form of forms) {
-    form.addEventListener('submit', (event) => {
-      if (!form.reportValidity()) {
-        event.preventDefault();
-        return;
-      }
+document.querySelectorAll(".signup").forEach((form) => {
+  const message = document.createElement("div");
 
-      const button = form.querySelector('button');
-      pendingForm = form;
-      originalButtonText = button.textContent;
-      button.disabled = true;
-      button.textContent = 'ENVOI…';
-    });
-  }
+  message.style.marginTop = "10px";
+  message.style.textAlign = "center";
+  message.style.fontWeight = "700";
+  message.style.color = "#f3c84a";
 
-  sink.addEventListener('load', () => {
-    if (!pendingForm) return;
+  form.appendChild(message);
 
-    const form = pendingForm;
-    const button = form.querySelector('button');
-    pendingForm = null;
-
-    form.reset();
-    button.disabled = false;
-    button.textContent = '✅ MERCI, INSCRIPTION ENREGISTRÉE ❤️';
-
-    window.setTimeout(() => {
-      button.textContent = originalButtonText;
-    }, 3500);
+  form.addEventListener("submit", () => {
+    submittedForm = form;
+    message.textContent = "Envoi...";
   });
-})();
+});
+
+sink.addEventListener("load", () => {
+  if (!submittedForm) return;
+
+  const message = submittedForm.querySelector("div");
+
+  message.textContent = "Merci, ton inscription est enregistrée ❤️";
+
+  submittedForm.reset();
+  submittedForm = null;
+});
