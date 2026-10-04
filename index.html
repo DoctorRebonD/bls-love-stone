@@ -8,38 +8,84 @@
   <meta name="description" content="Love Stone — bientôt disponible.">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <main class="page-shell">
-    <section class="poster poster-desktop" aria-label="Présentation Love Stone">
-      <img class="poster-image" src="assets/love-stone.png" alt="Présentation Love Stone BLS">
 
-      <form class="signup signup-overlay" id="signup-desktop"
-            action="https://script.google.com/macros/s/AKfycbzpflphFwZINGus1GFZR5Uy4MwJWfVBNGuN3yo9rfM66vDB2CyMIMzRvunyjkT04hxxeg/exec"
-            method="get" target="sheetSink">
-        <label class="sr-only" for="email-desktop">Ton adresse e-mail</label>
-        <input id="email-desktop" name="email" type="email" autocomplete="email" placeholder="Ton adresse e-mail" required>
-        <button type="submit">🔔 PRÉVENEZ-MOI AU LANCEMENT ❤️</button>
+    <section class="poster poster-desktop" aria-label="Présentation Love Stone">
+      <img class="poster-image"
+           src="assets/love-stone.png"
+           alt="Présentation Love Stone BLS">
+
+      <form class="signup signup-overlay"
+            id="signup-desktop"
+            action="https://script.google.com/macros/s/AKfycbxUQebtcMaetOSba0mS0kpRPs6wkn1zPJigihi-WgMMtIiCLhFzin8KIJspYhmEUp047g/exec"
+            method="get"
+            target="sheetSink">
+
+        <label class="sr-only" for="email-desktop">
+          Ton adresse e-mail
+        </label>
+
+        <input id="email-desktop"
+               name="email"
+               type="email"
+               autocomplete="email"
+               placeholder="Ton adresse e-mail"
+               required>
+
+        <button type="submit">
+          🔔 PRÉVENEZ-MOI AU LANCEMENT ❤️
+        </button>
       </form>
     </section>
 
+
     <section class="poster poster-mobile" aria-label="Présentation Love Stone">
-      <img class="mobile-slice" src="assets/love-stone-mobile-top.png" alt="Présentation Love Stone BLS">
+
+      <img class="mobile-slice"
+           src="assets/love-stone-mobile-top.png"
+           alt="Présentation Love Stone BLS">
 
       <div class="mobile-form-panel">
-        <form class="signup signup-mobile" id="signup-mobile"
+
+        <form class="signup signup-mobile"
+              id="signup-mobile"
               action="https://script.google.com/macros/s/AKfycbxUQebtcMaetOSba0mS0kpRPs6wkn1zPJigihi-WgMMtIiCLhFzin8KIJspYhmEUp047g/exec"
-method="get"
-target="sheetSink"
-          <label class="sr-only" for="email-mobile">Ton adresse e-mail</label>
-          <input id="email-mobile" name="email" type="email" autocomplete="email" placeholder="Ton adresse e-mail" required>
-          <button type="submit">🔔 PRÉVENEZ-MOI AU LANCEMENT ❤️</button>
+              method="get"
+              target="sheetSink">
+
+          <label class="sr-only" for="email-mobile">
+            Ton adresse e-mail
+          </label>
+
+          <input id="email-mobile"
+                 name="email"
+                 type="email"
+                 autocomplete="email"
+                 placeholder="Ton adresse e-mail"
+                 required>
+
+          <button type="submit">
+            🔔 PRÉVENEZ-MOI AU LANCEMENT ❤️
+          </button>
+
         </form>
+
       </div>
 
-      <img class="mobile-slice" src="assets/love-stone-mobile-bottom.png" alt="Pourquoi Love Stone, mode d’emploi et précautions">
+      <img class="mobile-slice"
+           src="assets/love-stone-mobile-bottom.png"
+           alt="Pourquoi Love Stone, mode d’emploi et précautions">
+
     </section>
 
-    <iframe name="sheetSink" id="sheetSink" class="sheet-sink" title="Envoi du formulaire"></iframe>
+    <iframe name="sheetSink"
+            id="sheetSink"
+            class="sheet-sink"
+            title="Envoi du formulaire">
+    </iframe>
+
   </main>
 
   <script src="script.js"></script>
