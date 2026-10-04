@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120a05">
+  <title>Love Stone — BLS</title>
+  <meta name="description" content="Love Stone — bientôt disponible.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="poster poster-desktop" aria-label="Présentation Love Stone">
+      <img class="poster-image" src="assets/love-stone.png" alt="Présentation Love Stone BLS">
+
+      <form class="signup signup-overlay" id="signup-desktop" method="post" target="sheetSink" novalidate>
+        <label class="sr-only" for="email-desktop">Ton adresse e-mail</label>
+        <input id="email-desktop" name="email" type="email" autocomplete="email" placeholder="Ton adresse e-mail" required>
+        <button type="submit">🔔 PRÉVENEZ-MOI AU LANCEMENT ❤️</button>
+      </form>
+    </section>
+
+    <section class="poster poster-mobile" aria-label="Présentation Love Stone">
+      <img class="mobile-slice" src="assets/love-stone-mobile-top.png" alt="Présentation Love Stone BLS">
+
+      <div class="mobile-form-panel">
+        <form class="signup signup-mobile" id="signup-mobile" method="post" target="sheetSink" novalidate>
+          <label class="sr-only" for="email-mobile">Ton adresse e-mail</label>
+          <input id="email-mobile" name="email" type="email" autocomplete="email" placeholder="Ton adresse e-mail" required>
+          <button type="submit">🔔 PRÉVENEZ-MOI AU LANCEMENT ❤️</button>
+        </form>
+      </div>
+
+      <img class="mobile-slice" src="assets/love-stone-mobile-bottom.png" alt="Pourquoi Love Stone, mode d’emploi et précautions">
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <iframe name="sheetSink" class="sheet-sink" title="Envoi du formulaire"></iframe>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
